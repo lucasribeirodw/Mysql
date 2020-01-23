@@ -5,22 +5,32 @@
     "keywords": ["eden", "library"],
     "homepage": "http://eden-php.com",
     "license": "MIT",
-    "authors": [
-        {
-            "name": "Christian Blanquera",
-            "email": "cblanquera@openovate.com"
-        }
-    ],
+    "authors": [{
+        "name": "Christian Blanquera",
+        "email": "cblanquera@openovate.com"
+    }],
     "require": {
         "php": ">=5.4.1",
-		"eden/core": "4.*",
-		"eden/string": "4.*",
-		"eden/array": "4.*",
+        "eden/core": "4.*",
+        "eden/string": "4.*",
+        "eden/array": "4.*",
         "eden/model": "4.*",
         "eden/collection": "4.*",
-        "eden/sql": "4.*"
+        "lucasribeirodw/Sql": "master"
     },
+    "repositories": [{
+        "type": "package",
+        "package": {
+            "version": "master",
+            "name": "lucasribeirodw/Sql",
+            "source": {
+                "url": "https://github.com/lucasribeirodw/Sql.git",
+                "type": "git",
+                "reference": "master"
+            }
+        }
+    }],
     "autoload": {
-         "psr-4": { "Eden\\Mysql\\": "src/" }
+        "psr-4": { "Eden\\Mysql\\": "src/" }
     }
 }
